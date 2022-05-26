@@ -1,5 +1,6 @@
 import React from 'react'
 import {BrowserRouter,Routes,Route, Link} from "react-router-dom"
+import AppTodo from './comps/appTodo'
 
 import Cars from './comps/cars'
 
@@ -15,6 +16,7 @@ export default function AppRoutes() {
           <div className='container p-2'>
           <Link to="/" className='me-2'>Home</Link>
           <Link to="/cars" className='me-2'>Cars</Link>
+          <Link to="/todo" className='me-2'>To do</Link>
 
 
           </div>
@@ -22,6 +24,7 @@ export default function AppRoutes() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/cars" element={<Cars />} />
+          <Route path="/todo" element={<AppTodo />} />
 
           <Route path="/*" element={<Page404 />} />
         </Routes>
